@@ -1,6 +1,6 @@
 int switchPin = 7;
 boolean lastButton = LOW;
-boolean ledOn = false;
+boolean flag = false;
 boolean currentButton = LOW;
 
 boolean debounce(boolean last)

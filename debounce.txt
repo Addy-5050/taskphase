@@ -1,0 +1,15 @@
+int switchPin = 7;
+boolean lastButton = LOW;
+boolean ledOn = false;
+boolean currentButton = LOW;
+
+boolean debounce(boolean last)
+{
+  boolean current = digitalRead(switchPin);
+  if(last != current)
+  {
+    delay(50);
+    current = digitalRead(switchPin);
+  }
+  return current;
+}
